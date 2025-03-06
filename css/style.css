@@ -1,0 +1,191 @@
+:root {
+    /* CSS HEX */
+    --secondary: #fe938cff;
+    --desert-sand: #e6b89cff;
+    --text: #ead2acff;
+    --cadet-gray: #9cafb7ff;
+    --primary: #4281a4ff;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--primary);
+    color: var(--text);
+    margin: 0;
+    flex-direction: column;
+}
+
+.content {
+    padding: 2em;
+}
+
+nav {
+    background-color: var(--secondary);
+    width: 100vw;
+    height: 5em;
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+img {
+    /* max-width: 100%; */
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    /* height: auto; */
+    display: block;
+    margin: 0 auto;
+}
+
+#home-pic {
+    background: none;
+}
+
+nav a {
+    display: inline-flex;
+    /* Ensure <a> behaves as a flex container */
+    align-items: center;
+    /* Center image vertically within the <a> */
+    height: 100%;
+    /* Ensure <a> takes the full height of the navbar */
+    text-decoration-line: none;
+    background: var(--cadet-gray);
+    border-radius: 1em;
+    transition: all 0.5s ease;
+    padding: 0 1em;
+    color: black;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    background: var(--desert-sand);
+}
+
+nav a img {
+    align-items: left;
+}
+
+.profile-pic {
+    width: 15em;
+    border-radius: 1em;
+    box-shadow: 2px 2px black;
+}
+
+.profile-pic:hover {
+    width: 25em;
+    box-shadow: 4px 4px black;
+    transition: all 0.3s ease;
+}
+
+.amigos-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    /* Optional: adds spacing between the child elements */
+    flex-wrap: wrap;
+    /* Allow wrapping if needed */
+}
+
+.amigos {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: var(--text);
+    background: var(--secondary);
+}
+
+.amigos img {
+    width: 10em;
+    height: auto;
+    object-fit: cover;
+    /* Ensures the image covers the container without distortion */
+    aspect-ratio: 1;
+    border-radius: 2em;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: var(--secondary);
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    /* Maximum width of the form */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* Spacing between form elements */
+}
+
+.contact-form label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    /* Minimum height for the textarea */
+}
+
+.contact-form button {
+    padding: 0.8em 2em;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4caf50;
+    /* Green border on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+.contact-form button:disabled {
+    background-color: #ccc;
+    /* Disabled button state */
+    cursor: not-allowed;
+}
