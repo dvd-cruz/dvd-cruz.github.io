@@ -1,183 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>WorkShop Web Dev 2024</title>
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <nav>
-            <a href="./index.html" id="home-pic">
-                <img src="images/duck.png" alt="a nice selfie">
-            </a>
-            <a href="contactos.html">Contactos</a>
-            <a href="post.html">My Post!</a>
-            <a href="images/wtf-is-this.gif">AI is out of control</a>
-        </nav>
-        <div class="content">
-            <button id="dark-mode-toggle">Toggle Dark Mode</button>
-            <h1>Bem vindos à minha página!</h1>
-
-            <h2>Quem sou eu?</h2>
-            <img src="images/me.webp" alt="it's me guys" class="profile-pic">
-            <!-- <img src="images/wtf-is-this.gif" alt="it's me guys"> -->
-            <p>Olá, sou um pato sigma (?)</p>
-            <p>Não sei o que estava a pensar sinceramente. Pato sigma é ridículo. Mas olha para ele, está ali bué fixe com os seus óculos de sol, damn. Também queria ter esse <b>duck-drip</b> -> drip. Ya, bué fixe, mas era supost ser o pato a falar e não eu.</p>
-            <p>Vivo no lago e estudo literatura.</p>
-            <h2>O que é que eu faço?</h2>
-            <p>Mais adlib aqui, vai ter de ser.</p>
-            <ol>
-                <li>Cena 1</li>
-                <li>Cena 2</li>
-                <li>Cena 3</li>
-            </ol>
-
-
-            <h2>Os meus amigos!</h2>
-            <div class="amigos-outer">
-                <div class="amigos">
-                    <img src="images/dev.jpg" alt="dev">
-                    <p>Dev</p>
-                </div>
-                <div class="amigos">
-                    <img src="images/wojak.jpg" alt="wojak">
-                    <p>Wojak</p>
-                </div>
-                <div class="amigos">
-                    <img src="images/me_looking_cool.jpeg" alt="jose lopes">
-                    <p>José Lopes</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Cruz | Software Developer</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero { text-align: center; padding: 50px 20px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .project-card { border: 1px solid var(--cadet-gray); padding: 15px; border-radius: 8px; margin-bottom: 10px; }
+        .contact-links a { margin-right: 15px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#"><div class="nav-logo" style="color: var(--desert-sand); font-size: 2rem;"><strong>DC</strong></div></a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#demo">Demo</a>
+            <a href="https://linkedin.com/in/dvdcruz" target="_blank">LinkedIn</a> 
+            <a href="https://github.com/dvd-cruz" target="_blank">GitHub</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Others ▾</a>
+                <div class="dropdown-content">
+                    <a href="#skills">Skills</a>
+                    <a href="docs/CV_DavidCruz2026.pdf" target="_blank">Download CV</a>
+                    <a href="mailto:davidcruz@live.com.pt">Contact Me</a>
+                    <a href="https://www.kaggle.com/dvdcruz11" target="_blank">Kaggle</a>
+                    <a href="https://leetcode.com/u/dvdcruz/" target="_blank">LeetCode</a>
                 </div>
             </div>
-
-            <h2>Mais alguma coisa?</h2>
-            <p>Não</p>
-
-            <h2>What Can JavaScript Do?</h2>
-
-            <p id="demo">JavaScript can change HTML content.</p>
-
-            <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-
-            <h1>API Requests Demo</h1>
-
-            <div>
-                <h2>GET Request</h2>
-                <button onclick="fetchPosts()">Fetch Posts</button>
-            </div>
-
-            <div>
-                <h2>POST Request</h2>
-                <input type="text" id="postTitle" placeholder="Post Title" required>
-                <input type="text" id="postBody" placeholder="Post Body" required>
-                <button onclick="createPost()">Create Post</button>
-            </div>
-
-            <div id="results"></div>
         </div>
+    </nav>
 
-        <footer>
-            <p>Este é o footer. Voltem sempre 💖</p>
-        </footer>
+    <div class="content">
+        <header class="hero">
+            <div class="header-text">
+                <h1>David Cruz</h1>
+                <h3 style="color: var(--desert-sand); font-size: 1.8rem;">Software Developer</h3>
+                <p style="font-size: 1.1rem; max-width: 500px;">
+                    Master's student at IST specializing in AI and Cybersecurity. 
+                    Modernizing infrastructure with GenAI at Capgemini.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="mailto:davidcruz@live.com.pt" class="contact-btn">Get In Touch</a>
+                    <a href="docs/CV_DavidCruz2026.pdf" target="_blank" class="secondary-btn">View Resume</a>
+                </div>
+            </div>
+            <div class="hero-image-group">
+                <img src="images/foto_cortada.jpg" alt="David Cruz" class="profile-pic">
+                <div class="hero-socials">
+                    <a href="https://github.com/dvd-cruz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/dvdcruz" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.kaggle.com/dvdcruz11" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                    <a href="https://leetcode.com/u/dvdcruz/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+        </header>
 
-    </body>
+        <section id="about">
+            <h2>Professional Profile</h2>
+            <p>I am a responsible and efficient developer with a passion for computer science and technology. 
+            I excel in team environments but am equally effective working autonomously. 
+            Currently focusing on how AI and Cybersecurity solve real-world problems.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="project-card">
+                <div class="card-header">
+                    <h4>Software and AI Developer @ Capgemini (2025-Present)</h4>
+                    <img src="images/capgemini-logo.webp" alt="Capgemini Logo" class="company-logo">
+                </div>
+                <ul>
+                    <li>Modernized infrastructure for a major Portuguese Bank using GenAI for automated code migration.</li>
+                    <li>Developed a POC RAG chatbot on mental health following WHO guidelines.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Java Developer Internship @ INNOWAVE (2022)</h4>
+                <ul>
+                    <li>Built CRUD applications using Spring Boot and Hibernate.</li>
+                    <li>Integrated Keycloak authentication and tested endpoints with Postman.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <section class="skills-grid">
+                <div class="project-card">
+                    <strong>Languages/Frameworks</strong>
+                    <ul>
+                        <li>Java (Spring Boot, Hibernate)</li>
+                        <li>Python (Scikit-learn, TensorFlow, PyTorch)</li>
+                        <li>C, C#, HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <strong>Tools & Databases</strong>
+                    <ul>
+                        <li>SQL Server & Pentaho</li>
+                        <li>Git (Version Control)</li>
+                        <li>Linux & Scripting</li>
+                        <li>LaTeX & Photoshop</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section id="education">
+            <h2>Academic Background</h2>
+            <p><strong>Master's in Computer Science and Eng.</strong> - Instituto Superior Técnico (In Progress)</p>
+            <p><strong>Bachelor's in Computer Science and Eng.</strong> - Instituto Superior Técnico (2024)</p>
+        </section>
+
+        <hr>
+
+        <section id="demo">
+            <h2>Technical Demo: API Interaction</h2>
+            <p>As a developer, I understand the importance of seamless data integration.</p>
+            <button onclick="fetchPosts()">Test GET Request</button>
+            <div style="margin-top: 20px;">
+                <input type="text" id="postTitle" placeholder="Post Title">
+                <input type="text" id="postBody" placeholder="Post Body">
+                <button onclick="createPost()">Test POST Request</button>
+            </div>
+            <div id="results"></div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>David Cruz</h4>
+                <p>Developing intelligent solutions with a focus on AI integration and cybersecurity resilience.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#demo">API Demo</a></li>
+                    <li><a href="docs/CV_DavidCruz2026.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                        <p>📧 <a href="mailto:davidcruz@live.com.pt">davidcruz@live.com.pt</a></p>
+                        <p>📱 <a href="tel:+351937067602">+351 937 067 602</a></p>
+                        <div style="margin-top: 15px;">
+                            <a href="https://linkedin.com/in/dvdcruz" target="_blank">LinkedIn</a> | 
+                            <a href="https://github.com/dvd-cruz" target="_blank">GitHub</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 David Cruz. Built with efficiency and punctuality. 💖</p>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Lisbon, Portugal | IST & Capgemini</p>
+        </div>
+    </footer>
+
     <script>
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const root = document.documentElement;
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const root = document.documentElement;
 
-    // Dark Mode Toggle
-    darkModeToggle.addEventListener('click', () => {
-        // Check current color and toggle
-        if (root.style.getPropertyValue('--text') === '#2c2c2c') {
-            // Revert to light mode
-            root.style.setProperty('--secondary', '#fe938cff');
-            root.style.setProperty('--desert-sand', '#e6b89cff');
-            root.style.setProperty('--text', '#ead2acff');
-            root.style.setProperty('--cadet-gray', '#9cafb7ff');
-            root.style.setProperty('--primary', '#4281a4ff');
-            document.body.style.color = 'black';
-        } else {
-            // Switch to dark mode
-            root.style.setProperty('--secondary', '#8c4f4a');
-            root.style.setProperty('--desert-sand', '#4f4040');
-            root.style.setProperty('--text', '#2c2c2c');
-            root.style.setProperty('--cadet-gray', '#3f4f5b');
-            root.style.setProperty('--primary', '#1f4c66');
-            document.body.style.color = 'white';
-        }
-    });
-    const resultsDiv = document.getElementById('results');
-    const titleInput = document.getElementById('postTitle');
-    const bodyInput = document.getElementById('postBody');
-
-    // GET Request Function
-    async function fetchPosts() {
-        try {
-            // Fetch first 5 posts
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+        // Dark Mode Toggle
+        darkModeToggle.addEventListener('click', () => {
+            // Check current color and toggle
+            if (root.style.getPropertyValue('--text') === '#2c2c2c') {
+                // Revert to light mode
+                root.style.setProperty('--secondary', '#fe938cff');
+                root.style.setProperty('--desert-sand', '#e6b89cff');
+                root.style.setProperty('--text', '#ead2acff');
+                root.style.setProperty('--cadet-gray', '#9cafb7ff');
+                root.style.setProperty('--primary', '#4281a4ff');
+                document.body.style.color = 'black';
+            } else {
+                // Switch to dark mode
+                root.style.setProperty('--secondary', '#8c4f4a');
+                root.style.setProperty('--desert-sand', '#4f4040');
+                root.style.setProperty('--text', '#2c2c2c');
+                root.style.setProperty('--cadet-gray', '#3f4f5b');
+                root.style.setProperty('--primary', '#1f4c66');
+                document.body.style.color = 'white';
             }
+        });
+        const resultsDiv = document.getElementById('results');
+        const titleInput = document.getElementById('postTitle');
+        const bodyInput = document.getElementById('postBody');
 
-            const posts = await response.json();
+        // GET Request Function
+        async function fetchPosts() {
+            try {
+                // Fetch first 5 posts
+                const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
 
-            // Display posts
-            resultsDiv.innerHTML = '<h3>Retrieved Posts:</h3>' + 
-                posts.map(post => `
-                    <div>
-                    <strong>Title:</strong> ${post.title}<br>
-                    <strong>Body:</strong> ${post.body}
-                    </div>
-                    `).join('<hr>');
-        } catch (error) {
-            resultsDiv.innerHTML = `Error: ${error.message}`;
-        }
-    }
-
-    // POST Request Function
-    async function createPost() {
-        const title = titleInput.value;
-        const body = bodyInput.value;
-
-        if (!title || !body) {
-            alert('Please enter both title and body');
-            return;
-        }
-
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                body: JSON.stringify({
-                    title: title,
-                    body: body,
-                    userId: 1  // Simulated user ID
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8'
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            });
 
-            if (!response.ok) {
-                throw new Error('Failed to create post');
+                const posts = await response.json();
+
+                // Display posts
+                resultsDiv.innerHTML = '<h3>Retrieved Posts:</h3>' + 
+                    posts.map(post => `
+                        <div>
+                        <strong>Title:</strong> ${post.title}<br>
+                        <strong>Body:</strong> ${post.body}
+                        </div>
+                        `).join('<hr>');
+            } catch (error) {
+                resultsDiv.innerHTML = `Error: ${error.message}`;
+            }
+        }
+
+        // POST Request Function
+        async function createPost() {
+            const title = titleInput.value;
+            const body = bodyInput.value;
+
+            if (!title || !body) {
+                alert('Please enter both title and body');
+                return;
             }
 
-            const newPost = await response.json();
+            try {
+                const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        title: title,
+                        body: body,
+                        userId: 1  // Simulated user ID
+                    }),
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8'
+                    }
+                });
 
-            resultsDiv.innerHTML = `
-<h3>Created Post:</h3>
-<strong>Title:</strong> ${newPost.title}<br>
-<strong>Body:</strong> ${newPost.body}<br>
-<strong>ID:</strong> ${newPost.id}
-`;
+                if (!response.ok) {
+                    throw new Error('Failed to create post');
+                }
 
-            // Clear inputs
-            titleInput.value = '';
-            bodyInput.value = '';
-        } catch (error) {
-            resultsDiv.innerHTML = `Error: ${error.message}`;
+                const newPost = await response.json();
+
+                resultsDiv.innerHTML = `
+    <h3>Created Post:</h3>
+    <strong>Title:</strong> ${newPost.title}<br>
+    <strong>Body:</strong> ${newPost.body}<br>
+    <strong>ID:</strong> ${newPost.id}
+    `;
+
+                // Clear inputs
+                titleInput.value = '';
+                bodyInput.value = '';
+            } catch (error) {
+                resultsDiv.innerHTML = `Error: ${error.message}`;
+            }
         }
-    }
     </script>
+</body>
 </html>
