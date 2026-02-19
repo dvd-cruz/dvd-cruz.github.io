@@ -54,10 +54,10 @@
                 </div>
             </div>
             <div class="hero-image-group">
-                <img src="images/foto_cortada.jpg" alt="David Cruz" class="profile-pic">
+                <img src="images/foto_cortada2.jpg" alt="David Cruz" class="profile-pic">
                 <div class="hero-socials">
-                    <a href="https://github.com/dvd-cruz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/dvdcruz" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/dvd-cruz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://www.kaggle.com/dvdcruz11" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
                     <a href="https://leetcode.com/u/dvdcruz/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
                 </div>
@@ -68,59 +68,107 @@
         </a>
         <section id="about">
             <h2>About Me</h2>
-            <p>I’m always eager to learn and take pride in being responsible, efficient, and punctual in my work. I’m comfortable communicating and working within a team while still being autonomous when the situation requires it. 
-            I am capable of working well under pressure and I learn new tools with ease. Technology has been a part of my life for as long as I can remember, and that early interest has grown into a passion for computers and science.
+            <p class="lead-text">
+                I am a <strong>Software Developer</strong> dedicated to building reliable systems, with a particular interest in <strong>Artificial Intelligence</strong> and the practical challenges of <strong>Cybersecurity</strong>. <br> <br> 
+                Technology has been a part of my life for as long as I can remember, and that early interest has grown into a <strong>passion for computers and science</strong>.    
             </p>
+            
+            <div class="about-grid">
+                <div class="about-item">
+                    <p><strong>Eager to learn</strong>, efficient, and punctual. I am capable of <strong>working well under pressure</strong> and I learn <strong>new tools with ease</strong>.</p>
+                </div>
+                <div class="about-item">
+                    <p>Strong communicator who values <strong>teamwork</strong> while maintaining high autonomy when required.</p>
+                </div>
+            </div>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
-            <div class="project-card">
-                <div class="card-header">
-                    <h4>Software and AI Developer @ Capgemini (2025-Present)</h4>
-                    <img class="company-logo" src="images/capgemini-logo.png" alt="Capgemini Logo">
+            <div class="project-card" style="display: flex; justify-content: space-between; gap: 20px;">
+                <div class="card-header" style="flex: 1;">
+                    <h4><strong>Software and AI Developer</strong> · Capgemini (2025-Present)</h4>
+                    <ul style="margin-top: 20px;">
+                        <li>Modernized the legacy infrastructure of a major Portuguese Bank by developing a GenAI tool to automate large-scale code migration.</li>
+                        <li>Followed the entire project lifecycle: from defining the AI architecture to the development of unit tests and debugging.</li>
+                        <li>Collaborated in an Agile environment, with a strong focus on teamwork.</li>
+                        <li>Implemented a POC RAG chatbot on mental health based on World Health Organization guidelines, integrating LLMs with structured knowledge retrieval.</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Modernized the infrastructure of a major Portuguese Bank by developing a GenAI tool to automate code migration. </li>
-                    <li>Followed the entire project lifecycle: from defining the AI architecture to the development of unit tests and debugging.</li>
-                    <li>Worked within an Agile development cycle, with a strong focus on teamwork.</li>
-                    <li>Implemented a POC RAG chatbot on mental health based on World Health Organization guidelines.</li>
-                </ul>
+                <div class="card-sidebar" style="width: 150px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <div class="logo-box">
+                        <img src="images/capgemini-logo.png" alt="Capgemini Logo" style="height: 32px; width: auto; object-fit: contain;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <strong style="font-size: 0.8rem; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Tech stack</strong>
+                        
+                        <div class="tech-stack" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; justify-content: center; width: 120px;">
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px; font-size: 0.85rem;">Python</span>
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px; font-size: 0.85rem;">LLMs</span>
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px; font-size: 0.85rem;">RAG</span>
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px; font-size: 0.85rem;">Agile</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="card-header">
-                <h4>Java Developer Internship @ Innowave (2022)</h4>
-                <img class="company-logo" src="images/innowave-logo.png" alt="Innowave Logo">
+
+            <div class="project-card" style="display: flex; justify-content: space-between; gap: 20px;">
+                <div class="card-header" style="flex: 1;">
+                    <h4><strong>Java Developer Internship</strong> · Innowave (2022)</h4>
+                    <ul style="margin-top: 40px;">
+                        <li>Developed a CRUD application using Java frameworks such as Spring Boot, and Hibernate. </li>
+                        <li>Integrated an authentication functionality using the Keycloak platform in an project, providing role-based access control.</li>
+                        <li>Used Postman to test API requests and different endpoints.</li>
+                        <li>Explored REST services, experimenting with different IDEs.</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Developed a CRUD application using Java frameworks such as Spring Boot, and Hibernate. </li>
-                    <li>Integrated an authentication functionality using the Keycloak platform and tested endpoints with Postman.</li>
-                </ul>
+                <div class="card-sidebar" style="width: 150px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <div class="logo-box">
+                        <img src="images/innowave-logo.png" alt="Innowave Logo" style="height: 32px; width: auto; object-fit: contain;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <strong style="font-size: 0.75rem; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Tech stack</strong>
+                        
+                        <div class="tech-stack" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px; justify-content: center; width: 120px;">
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px;">Java</span>
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px;">Spring Boot</span>
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px;">Hibernate</span>
+                            <span class="skill-tag" style="text-align: center; flex: 1 1 60px;">Keycloak</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="education">
             <h2>Academic Background</h2>
             <div class="project-card">
-                <div class="card-header">
-                <p><strong>Master's in Computer Science and Eng.</strong> - Instituto Superior Técnico (In Progress)</p>
-                <img class="company-logo" src="images/logo_ist.png" alt="IST Logo">
+                <div class="card-header" style="display: flex; align-items: center; justify-content: space-between;">
+                    <p style="margin: 0;">
+                        <strong>Master's in Computer Science and Eng.</strong> · Instituto Superior Técnico (In Progress)
+                    </p>
+                    
+                    <div class="logo-box" style="display: flex; align-items: center;">
+                        <img src="images/logo_ist.png" alt="IST Logo" style="height: 40px; width: auto; object-fit: contain;">
+                    </div>
                 </div>
 
-                <p>
+                <p style="margin-left: 25px; max-width: 700px;">
                 Specializations: Artificial Intelligence and Cybersecurity.
                 I am currently learning about these topics and am curious to see how they translate to solving real-world problems.
                 </p>
             </div>
             
             <div class="project-card">
-                <div class="card-header">
-                <p><strong>Bachelor's in Computer Science and Eng.</strong> - Instituto Superior Técnico (2024)</p>
-                <img class="company-logo" src="images/logo_ist.png" alt="IST Logo">
+                <div class="card-header" style="display: flex;">
+                <p><strong>Bachelor's in Computer Science and Eng.</strong> · Instituto Superior Técnico (2024)</p>
+                <div class="logo-box">
+                    <img src="images/logo_ist.png" alt="IST Logo" style="height: 40px; width: auto; object-fit: contain;">
+                </div>
                 </div>
 
-                <p>
-                Hands-on projects enhanced my problem-solving and teamworking skills.
+                <p style="margin-left: 25px; max-width: 700px;">
+                Hands-on projects enhanced my problem-solving and teamworking skills. <br>
                 I studied various programming languages, algorithms, data structures, and computer architecture, preparing me to tackle complex challenges in the field of technology. 
                 </p>
             </div>
@@ -130,41 +178,81 @@
             <h2>Technical Skills</h2>
             <section class="skills-grid">
                 <div class="project-card">
-                    <strong>Languages/Frameworks</strong>
-                    <ul>
-                        <li>Java (Spring Boot, Hibernate)</li>
-                        <li>Python (Scikit-learn, TensorFlow, PyTorch)</li>
-                        <li>C, C#, HTML, CSS, JavaScript</li>
-                    </ul>
+                    <h3 style="margin-bottom: 15px;">Software Development</h3>
+                    <div class="tech-stack">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">C / C#</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <strong>Tools & Databases</strong>
-                    <ul>
-                        <li>SQL Server & Pentaho</li>
-                        <li>Git (Version Control)</li>
-                        <li>Linux & Scripting</li>
-                        <li>LaTeX & Photoshop</li>
-                    </ul>
+                    <h3 style="margin-bottom: 15px;">AI & Data Science</h3>
+                    <div class="tech-stack">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Pentaho</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 style="margin-bottom: 15px;">Cybersecurity & Systems</h3>
+                    <div class="tech-stack">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Shell Scripting</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Cryptography</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 style="margin-bottom: 15px;">Databases & Tools</h3>
+                    <div class="tech-stack">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
                 </div>
             </section>
         </section>
 
         <section id="demo">
             <h2>Technical Demo: API Interaction</h2>
-            <p>As a developer, I understand the importance of seamless data integration.</p>
-            <button onclick="fetchPosts()">Test GET Request</button>
-            <div style="margin-top: 20px;">
-                <input type="text" id="postTitle" placeholder="Post Title">
-                <input type="text" id="postBody" placeholder="Post Body">
-                <button onclick="createPost()">Test POST Request</button>
+            <p class="lead-text">This demo interacts with the <strong>JSONPlaceholder API</strong> to demonstrate asynchronous data handling (REST) and real-time DOM updates.</p>
+            
+            <div class="project-card">
+                <div class="demo-controls" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; align-items: flex-end;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <label style="display: block; font-size: 0.8rem; margin-bottom: 5px; opacity: 0.8;">Post Title</label>
+                        <input type="text" id="postTitle" placeholder="Enter title..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--cadet-gray); background: transparent; color: inherit;">
+                    </div>
+                    <div style="flex: 2; min-width: 250px;">
+                        <label style="display: block; font-size: 0.8rem; margin-bottom: 5px; opacity: 0.8;">Post Content</label>
+                        <input type="text" id="postBody" placeholder="Enter body content..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--cadet-gray); background: transparent; color: inherit;">
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button onclick="createPost()" class="contact-btn" style="padding: 10px 20px;">Send POST</button>
+                        <button onclick="fetchPosts()" class="secondary-btn" style="padding: 10px 20px;">Run GET</button>
+                    </div>
+                </div>
+
+                <div id="results" style="background: rgba(0,0,0,0.1); padding: 15px; border-radius: 8px; min-height: 50px; border-left: 4px solid var(--primary);">
+                    <span style="opacity: 0.6; font-style: italic;">API output will appear here...</span>
+                </div>
             </div>
-            <div id="results"></div>
         </section>
     </div>
 
     <footer>
         <p>
-            Always eager to learn and grow. <br>
+            Always eager to learn and grow. <br><br>
             &copy; 2026 David Cruz &bull; Lisbon, Portugal
         </p>
     </footer>
@@ -195,102 +283,67 @@
         // Start watching the Experience section
         observer.observe(experienceSection);
 
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const root = document.documentElement;
-
-        // Dark Mode Toggle
-        darkModeToggle.addEventListener('click', () => {
-            // Check current color and toggle
-            if (root.style.getPropertyValue('--text') === '#2c2c2c') {
-                // Revert to light mode
-                root.style.setProperty('--secondary', '#fe938cff');
-                root.style.setProperty('--desert-sand', '#e6b89cff');
-                root.style.setProperty('--text', '#ead2acff');
-                root.style.setProperty('--cadet-gray', '#9cafb7ff');
-                root.style.setProperty('--primary', '#4281a4ff');
-                document.body.style.color = 'black';
-            } else {
-                // Switch to dark mode
-                root.style.setProperty('--secondary', '#8c4f4a');
-                root.style.setProperty('--desert-sand', '#4f4040');
-                root.style.setProperty('--text', '#2c2c2c');
-                root.style.setProperty('--cadet-gray', '#3f4f5b');
-                root.style.setProperty('--primary', '#1f4c66');
-                document.body.style.color = 'white';
-            }
-        });
         const resultsDiv = document.getElementById('results');
-        const titleInput = document.getElementById('postTitle');
-        const bodyInput = document.getElementById('postBody');
+const titleInput = document.getElementById('postTitle');
+const bodyInput = document.getElementById('postBody');
 
-        // GET Request Function
-        async function fetchPosts() {
-            try {
-                // Fetch first 5 posts
-                const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
+// GET Request Function
+async function fetchPosts() {
+    resultsDiv.innerHTML = '<em>Loading posts...</em>';
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const posts = await response.json();
 
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+        resultsDiv.innerHTML = '<h4 style="margin-bottom:10px;">Latest Posts from API:</h4>' + 
+            posts.map(post => `
+                <div style="margin-bottom: 10px;">
+                    <strong style="color: var(--primary);">#${post.id}:</strong> ${post.title}
+                    <p style="font-size: 0.9rem; margin: 5px 0 0 25px; opacity: 0.8;">${post.body}</p>
+                </div>
+            `).join('<hr style="opacity: 0.1; margin: 10px 0;">');
+    } catch (error) {
+        resultsDiv.innerHTML = `<span style="color: #fe938c;">Error: ${error.message}</span>`;
+    }
+}
 
-                const posts = await response.json();
+// POST Request Function
+async function createPost() {
+    const title = titleInput.value;
+    const body = bodyInput.value;
 
-                // Display posts
-                resultsDiv.innerHTML = '<h3>Retrieved Posts:</h3>' + 
-                    posts.map(post => `
-                        <div>
-                        <strong>Title:</strong> ${post.title}<br>
-                        <strong>Body:</strong> ${post.body}
-                        </div>
-                        `).join('<hr>');
-            } catch (error) {
-                resultsDiv.innerHTML = `Error: ${error.message}`;
-            }
-        }
+    if (!title || !body) {
+        alert('Please fill in both fields.');
+        return;
+    }
 
-        // POST Request Function
-        async function createPost() {
-            const title = titleInput.value;
-            const body = bodyInput.value;
+    resultsDiv.innerHTML = '<em>Sending data...</em>';
 
-            if (!title || !body) {
-                alert('Please enter both title and body');
-                return;
-            }
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({ title, body, userId: 1 }),
+            headers: { 'Content-type': 'application/json; charset=UTF-8' }
+        });
 
-            try {
-                const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        title: title,
-                        body: body,
-                        userId: 1  // Simulated user ID
-                    }),
-                    headers: {
-                        'Content-type': 'application/json; charset=UTF-8'
-                    }
-                });
+        if (!response.ok) throw new Error('Failed to create post');
+        const newPost = await response.json();
 
-                if (!response.ok) {
-                    throw new Error('Failed to create post');
-                }
+        resultsDiv.innerHTML = `
+            <div style="color: #4CAF50; margin-bottom: 10px;"><strong>✓ Success! Post Created (Simulated)</strong></div>
+            <strong>ID:</strong> ${newPost.id}<br>
+            <strong>Title:</strong> ${newPost.title}<br>
+            <strong>Body:</strong> ${newPost.body}
+        `;
 
-                const newPost = await response.json();
+        titleInput.value = '';
+        bodyInput.value = '';
+    } catch (error) {
+        resultsDiv.innerHTML = `<span style="color: #fe938c;">Error: ${error.message}</span>`;
+    }
+}
 
-                resultsDiv.innerHTML = `
-    <h3>Created Post:</h3>
-    <strong>Title:</strong> ${newPost.title}<br>
-    <strong>Body:</strong> ${newPost.body}<br>
-    <strong>ID:</strong> ${newPost.id}
-    `;
-
-                // Clear inputs
-                titleInput.value = '';
-                bodyInput.value = '';
-            } catch (error) {
-                resultsDiv.innerHTML = `Error: ${error.message}`;
-            }
-        }
     </script>
 </body>
 </html>

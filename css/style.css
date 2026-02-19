@@ -14,8 +14,7 @@ body {
     background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
     background-attachment: fixed; /* Keeps the gradient still while you scroll */
     color: var(--text);
-    font-family: 'Inter', sans-serif;
-    margin: 0;
+    font-family: 'Outfit', sans-serif;    margin: 0;
     line-height: 1.6;
     background-color: #0d1117;
     background-image: 
@@ -65,6 +64,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 32px; /* Adjust this value (e.g., 40px) to increase/decrease space */
+    font-family: 'Inter', sans-serif;
 }
 
 /* Container for all content */
@@ -116,6 +116,7 @@ nav a:hover {
 .project-card:hover {
     border-color: var(--secondary);
     transform: translateY(-2px);
+    border-left: 2px solid var(--secondary);
 }
 
 /* Typography Polish */
@@ -271,17 +272,13 @@ footer {
 }
 
 .card-header {
-    display: flex;
     justify-content: space-between; /* Pushes items to opposite sides */
     align-items: center;            /* Centers them vertically */
     margin-bottom: 2px;           /* Space between header and list */
 }
 
-.company-logo {
-    height: 70px;                  /* Adjust based on the logo shape */
-    width: auto;
-    border-radius: 1px;            /* Optional: slight rounding */
-    object-fit: contain;
+.card-header strong{
+    color: #6ea8ff; 
 }
 
 /* Ensure the title doesn't crash into the logo on small screens */
@@ -433,11 +430,113 @@ footer {
     }
 }
 
-.company-logo {
-    background-color: rgba(255, 255, 255, 0.7) !important; /* 90% white */ 
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
-    height: 30px;              /* Fixed height keeps them uniform */
+.logo-box {
+    /* 1. Set specific size for the background */
+    width: 120px; 
+    height: 60px;
+    
+    /* 2. Style the background */
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 8px;
+    /* 3. Center the image perfectly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Optional: shadow to make it pop */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-box img {
+    /* 4. Keep scale fixed */
+    height: 30px; /* Adjust this to your preferred fixed scale */
     width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)); 
+    transition: filter 0.3s ease;
+}
+
+#about p {
+    line-height: 1.8;      /* Adds breathing room */
+    margin-bottom: 1.5rem; /* Separates the paragraphs nicely */
+    color: #cbd5e0;        /* A softer, modern off-white/gray */
+}
+
+#about strong {
+    color: #58a6ff;        /* Matches your blue theme */
+    font-weight: 600;
+}
+
+#about h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;     /* Keeps the subheaders humble but clear */
+}
+
+/* Custom modern dash or dot */
+.experience-card li::before {
+    content: "→"; /* Or a simple custom SVG icon */
+    position: absolute;
+    left: 0;
+    color: var(--secondary); /* Use your Capgemini blue */
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+ul{
+    max-width: 700px;
+    line-height: 1;
+    list-style-type: none;
+}
+
+li {
+    position: relative;
+    padding-left: 30px;
+
+    /* ADJUST THIS VALUE: 20px or 24px usually feels 'premium' */
+    margin-bottom: 24px; 
+
+    line-height: 1.7; /* Also increases space between lines of the same bullet */
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;        /* length of dash */
+    height: 2px;        /* thickness */
+    background: var(--desert-sand);
+}
+
+.tech-stack {
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 999px;
+  background: rgba(74, 144, 226, 0.12);
+  border: 1px solid rgba(74, 144, 226, 0.35);
+  color: var(--desert-sand);
+  transition: all 0.25s ease;
+  margin-bottom: 5px;
+}
+
+.skills-grid {
+    display: grid !important;
+    /* Force exactly 2 columns */
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px; /* Adjust based on your layout */
+    margin: 0 auto;
 }
