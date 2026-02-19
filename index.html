@@ -6,6 +6,7 @@
     <title>David Cruz | Software Developer</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
     <style>
         .hero { text-align: center; padding: 50px 20px; }
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
@@ -15,22 +16,23 @@
 </head>
 <body>
     <nav>
-        <a href="#"><div class="nav-logo" style="color: var(--desert-sand); font-size: 2rem;"><strong>DC</strong></div></a>
+        <a href="#" class="nav-logo">
+            <strong >DC</strong>
+        </a>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
-            <a href="#demo">Demo</a>
-            <a href="https://linkedin.com/in/dvdcruz" target="_blank">LinkedIn</a> 
-            <a href="https://github.com/dvd-cruz" target="_blank">GitHub</a>
+            <a href="#skills">Skills</a>
+            <a href="docs/CV_DavidCruz2026.pdf" target="_blank">Resume</a>
+            <a href="mailto:davidcruz@live.com.pt">Contact</a>
             <div class="dropdown">
-                <a href="#" class="dropbtn">Others ▾</a>
+                <a href="#" class="dropbtn">Links ▾</a>
                 <div class="dropdown-content">
-                    <a href="#skills">Skills</a>
-                    <a href="docs/CV_DavidCruz2026.pdf" target="_blank">Download CV</a>
-                    <a href="mailto:davidcruz@live.com.pt">Contact Me</a>
-                    <a href="https://www.kaggle.com/dvdcruz11" target="_blank">Kaggle</a>
-                    <a href="https://leetcode.com/u/dvdcruz/" target="_blank">LeetCode</a>
+                    <a href="https://linkedin.com/in/dvdcruz" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a> 
+                    <a href="https://github.com/dvd-cruz" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                    <a href="https://www.kaggle.com/dvdcruz11" target="_blank">Kaggle <i class="fab fa-kaggle"></i></a>
+                    <a href="https://leetcode.com/u/dvdcruz/" target="_blank">LeetCode <i class="fas fa-code"></i></a>
                 </div>
             </div>
         </div>
@@ -60,12 +62,14 @@
                 </div>
             </div>
         </header>
-
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
         <section id="about">
-            <h2>Professional Profile</h2>
-            <p>I am a responsible and efficient developer with a passion for computer science and technology. 
-            I excel in team environments but am equally effective working autonomously. 
-            Currently focusing on how AI and Cybersecurity solve real-world problems.</p>
+            <h2>About Me</h2>
+            <p>I’m always eager to learn and take pride in being responsible, efficient, and punctual in my work. I’m comfortable communicating and working within a team while still being autonomous when the situation requires it. 
+            I am capable of working well under pressure and I learn new tools with ease. Technology has been a part of my life for as long as I can remember, and that early interest has grown into a passion for computers and science.
+            </p>
         </section>
 
         <section id="experience">
@@ -73,18 +77,23 @@
             <div class="project-card">
                 <div class="card-header">
                     <h4>Software and AI Developer @ Capgemini (2025-Present)</h4>
-                    <img src="images/capgemini-logo.webp" alt="Capgemini Logo" class="company-logo">
+                    <img src="images/capgemini-logo.webp" alt="Capgemini Logo" class="company-logo" style="background-color: white; padding: 5px; border-radius: 4px;">>
                 </div>
                 <ul>
-                    <li>Modernized infrastructure for a major Portuguese Bank using GenAI for automated code migration.</li>
-                    <li>Developed a POC RAG chatbot on mental health following WHO guidelines.</li>
+                    <li>Modernized the infrastructure of a major Portuguese Bank by developing a GenAI tool to automate code migration. </li>
+                    <li>Followed the entire project lifecycle: from defining the AI architecture to the development of unit tests and debugging.</li>
+                    <li>Worked within an Agile development cycle, with a strong focus on teamwork.</li>
+                    <li>Implemented a POC RAG chatbot on mental health based on World Health Organization guidelines.</li>
                 </ul>
             </div>
             <div class="project-card">
+                <div class="card-header">
                 <h4>Java Developer Internship @ INNOWAVE (2022)</h4>
+                <img src="images/innowave-logo.png" alt="INNOWAVE Logo" class="company-logo" style="background-color: white; padding: 5px; border-radius: 4px;">>
+                </div>
                 <ul>
-                    <li>Built CRUD applications using Spring Boot and Hibernate.</li>
-                    <li>Integrated Keycloak authentication and tested endpoints with Postman.</li>
+                    <li>Developed a CRUD application using Java frameworks such as Spring Boot, and Hibernate. </li>
+                    <li>Integrated an authentication functionality using the Keycloak platform and tested endpoints with Postman.</li>
                 </ul>
             </div>
         </section>
@@ -170,6 +179,31 @@
     </footer>
 
     <script>
+        // Select the arrow and the section to watch
+        const scrollArrow = document.querySelector('.scroll-down');
+        const experienceSection = document.querySelector('#experience');
+
+        // Configuration: trigger when 10% of the section is visible
+        const options = {
+            root: null,
+            threshold: 0.1 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // If Experience is on screen, hide the arrow
+                    scrollArrow.classList.add('hidden');
+                } else {
+                    // If we scroll back up, show the arrow again
+                    scrollArrow.classList.remove('hidden');
+                }
+            });
+        }, options);
+
+        // Start watching the Experience section
+        observer.observe(experienceSection);
+
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const root = document.documentElement;
 

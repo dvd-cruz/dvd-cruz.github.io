@@ -10,11 +10,18 @@
 }
 
 body {
-    background: var(--primary);
+    /* Subtle transition from deep navy to your primary dark color */
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    background-attachment: fixed; /* Keeps the gradient still while you scroll */
     color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     line-height: 1.6;
+    background-color: #0d1117;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(31, 111, 235, 0.15) 0px, transparent 50%), 
+        radial-gradient(at 100% 100%, rgba(35, 134, 54, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
 }
 
 /* Modernized Navigation */
@@ -43,6 +50,17 @@ nav a:hover {
     color: var(--desert-sand);
 }
 
+.nav-logo {
+  color: var(--desert-sand);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;   /* This makes it bold */
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -58,13 +76,16 @@ nav a:hover {
 
 /* Hero Section Refinement */
 .hero {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1; /* Establishes a stacking context */
+    background: transparent; /* Ensures the glow isn't cut off by a solid color */
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 50px;
     padding: 100px 0;
-    gap: 100px;
-    text-align: left;
-    margin-right: 0; /* Ensure no extra margin is pushing the image */
-    flex-shrink: 1;  /* Allows text to stay compact */
 }
 
 .header-text h1 {
@@ -77,7 +98,7 @@ nav a:hover {
 .profile-pic {
     width: 280px;
     height: 280px;
-    border-radius: 24px; /* Modern "Squircle" */
+    border-radius: 50px; /* Modern "Squircle" */
     border: 2px solid var(--cadet-gray);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
@@ -141,7 +162,7 @@ html {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--nav-bg); /* Use your nav background color */
+    background-color: #161b22; /* Solid dark background, matches nav */
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
     border: 1px solid var(--cadet-gray);
@@ -154,12 +175,20 @@ html {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: var(--text);
+    display: flex;            /* Enables flexbox */
+    justify-content: space-between; /* Pushes text to left, icon to right */
+    align-items: center;      /* Centers them vertically */
+    gap: 15px;               /* Ensures a minimum gap between text and icon */
     padding: 12px 16px;
+    color: var(--text);
     text-decoration: none;
-    display: block;
-    font-size: 0.9rem;
     transition: background 0.2s;
+}
+
+.dropdown-content a i {
+    font-size: 1.3rem;      /* Adjust icon size */
+    width: 20px;            /* Fixed width ensures all icons align vertically */
+    text-align: center;
 }
 
 /* Hover effect on dropdown links */
@@ -275,6 +304,10 @@ footer {
     font-weight: bold;
     margin-right: 10px;
     display: inline-block;
+    box-shadow: 0 0 10px 0px rgba(220, 230, 222, 0.61);
+    transition: all 1s ease;
+    position: relative; /* z-index only works on positioned elements */
+    z-index: 1;
 }
 
 .secondary-btn {
@@ -285,10 +318,26 @@ footer {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
+    transition: all 1s ease;
+    position: relative; /* z-index only works on positioned elements */
+    z-index: 10;
 }
 
-.contact-btn:hover { background-color: #2ea043; }
-.secondary-btn:hover { background-color: var(--cadet-gray); }
+.contact-btn:hover {
+    background-color: #2ea043;
+    /* Stronger glow on hover */
+    box-shadow: 0 0 60px 10px rgba(35, 134, 54, 0.6);
+    transform: translateY(-3px) scale(1.02); /* Slight scale up adds to the effect */
+    z-index: 1; /* Lifts the hovered button above everything else */
+}
+
+.secondary-btn:hover {
+    background-color: var(--cadet-gray);
+    /* Soft dark shadow to create lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    z-index: 10; /* Lifts the hovered button above everything else */
+}
 
 .hero-socials {
     display: flex;
@@ -318,4 +367,73 @@ footer {
 /* Ensure the image doesn't have extra bottom margin */
 .profile-pic {
     margin-bottom: 0;
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Increase the size so the fade has more room to breathe */
+    width: 800px; 
+    height: 800px;
+    /* Use multiple color stops for a smoother falloff */
+    background: radial-gradient(
+        circle, 
+        rgba(88, 166, 255, 0.08) 0%,   /* Very faint center */
+        rgba(88, 166, 255, 0.03) 40%,  /* Even fainter mid-point */
+        transparent 75%                /* Complete fade by 75% */
+    );
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Keeps the glow behind your name and photo */
+    pointer-events: none; /* Ensures you can still click buttons/links */   
+}
+
+.hero {
+    position: relative; /* Required so the arrow stays relative to the hero */
+    /* ... your existing flex properties ... */
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    animation: bounce 2s infinite; /* The "look at me" animation */
+    z-index: 10;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.scroll-down:hover {
+    color: var(--desert-sand);
+}
+
+.scroll-down.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevents clicking the arrow when it's invisible */
+}
+
+/* Keyframes for the bounce effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@media (max-height: 700px) {
+    .scroll-down {
+        display: none; /* Hide on very short screens to avoid clutter */
+    }
 }
