@@ -215,6 +215,8 @@ footer {
     padding: 60px 0 20px 0;
     margin-top: 80px;
     color: var(--text);
+    text-align: center;
+    border-top: 1px solid rgba(48, 54, 61, 0.5);
 }
 
 .footer-content {
@@ -254,13 +256,6 @@ footer {
 
 .footer-section ul li a:hover {
     color: var(--secondary);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(48, 54, 61, 0.5);
 }
 
 /* Responsive Footer */
@@ -436,4 +431,13 @@ footer {
     .scroll-down {
         display: none; /* Hide on very short screens to avoid clutter */
     }
+}
+
+.company-logo {
+    background-color: rgba(255, 255, 255, 0.7); /* 90% white */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+    height: 30px;              /* Fixed height keeps them uniform */
+    width: auto;
 }
