@@ -434,7 +434,7 @@ footer {
 }
 
 .company-logo {
-    background-color: rgba(255, 255, 255, 0.7); /* 90% white */
+    background-color: rgba(255, 255, 255, 0.7) !important; /* 90% white */ 
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
